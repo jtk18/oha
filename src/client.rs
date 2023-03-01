@@ -115,6 +115,8 @@ pub struct ClientBuilder {
         >,
     >,
     pub insecure: bool,
+    #[cfg(unix)]
+    pub unix_socket: Option<std::path::PathBuf>,
 }
 
 impl ClientBuilder {
